@@ -1,9 +1,15 @@
 # Kirby SEO
 
+A serp preview field for the panel.
+
+## What is SEO?
+
+It stands for Search Engine Optimization. Make yourself visible in the search engines.
+
 ## Installation
 
-1. Place the `fields/seo` folder in `site/fields`.
-2. Place the `plugins/seo` folder in `site/plugins`.
+1. Place the `fields/seo` folder in `site/fields`. The field for the panel.
+1. Place the `plugins/seo` folder in `site/plugins`. The helper functions for your site.
 
 ## Blueprint
 
@@ -31,9 +37,8 @@ echo $page->seo()->seoDescription('html');
 ```html
 <title><?php echo $page->seo()->seoTitle(); ?></title>
 <?php if( $page->seo()->hasSeoDescription() ) : ?>
-<meta name="description" content="<?php echo $page->seo()->seoDescription(); ?>">
+    <meta name="description" content="<?php echo $page->seo()->seoDescription(); ?>">
 <?php endif; ?>
-?>
 ```
 
 ## Prefix
@@ -46,11 +51,11 @@ c::set('seo.prefix', ' - Some prefix');
 
 ## Additional info
 
-- The preview design is a copy of Google serp.
+- The preview has the look of Google serp.
 - The seo title and the meta description will only be cut in the preview, not on the site.
-- New lines are stripped from the textarea and replaced with space.
+- Newlines are stripped from the textarea and replaced with space.
 - If the seo title tag is missing, it will use the `title` field value instead.
 - If the meta description is missing, it will not output anything.
 - Title tag is cut, not my character, but by width, just like Google.
 - Meta description in the preview is cut after 155 characters.
-- You can click on the seo title, meta description and the seo url.
+- You can click on the seo title, meta description and the seo url in the panel to edit them.
