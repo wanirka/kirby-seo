@@ -4,6 +4,8 @@ A serp preview field for the panel.
 
 ![](https://raw.githubusercontent.com/jenstornell/kirby-seo/master/preview.gif)
 
+The black thing in the recording is not a bug. It's a click to get the slug edit modal. It just did not fit in the screen.
+
 ## What is SEO?
 
 It stands for Search Engine Optimization. Make yourself visible in the search engines.
