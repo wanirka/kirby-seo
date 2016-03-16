@@ -1,0 +1,74 @@
+.seo-title {
+	margin-bottom: 5px;
+}
+
+.seo-title-group {
+	display: none;
+	margin-top: 0.5em;
+}
+
+.seo-description-group {
+	display: none;
+	margin-top: 0.5em;
+}
+
+.seo-preview-wrap {
+	padding: 20px;
+	background: #fff;
+	border-bottom: 2px solid #ddd;
+}
+
+.seo-preview {
+	width: 512px;
+
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.seo-preview-url {
+	white-space: nowrap;
+	height: 17px;
+	line-height: 16px;
+	font-size: 14px;
+	font-family: arial,sans-serif;
+}
+
+.seo-preview-url a {
+	color: #006621;
+}
+
+.seo-preview-title {
+	cursor: pointer;
+	color: #1a0dab;
+	white-space: nowrap;
+	font-size: 18px;
+	font-family: arial,sans-serif;
+	line-height: 1.2;
+	text-overflow: ellipsis;
+	-webkit-text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.seo-preview-title:hover {
+	text-decoration: underline;
+}
+
+.seo-preview-description {
+	line-height: 1.4;
+    word-wrap: break-word;
+	color: #545454;
+	font-family: arial,sans-serif;
+	font-size: 13px;
+}
+
+.seo-active {
+	display: block;
+}
+
+.seo-render {
+	display: none;
+}
