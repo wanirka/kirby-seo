@@ -2,6 +2,8 @@
 
 A serp preview field for the panel.
 
+![](https://raw.githubusercontent.com/jenstornell/kirby-seo/master/preview.gif)
+
 ## What is SEO?
 
 It stands for Search Engine Optimization. Make yourself visible in the search engines.
