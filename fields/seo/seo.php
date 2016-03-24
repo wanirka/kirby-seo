@@ -1,4 +1,6 @@
 <?php
+require 'seo-class.php';
+
 class SeoField extends BaseField {
 	static public $fieldname = 'seo';
 	static public $assets = array(

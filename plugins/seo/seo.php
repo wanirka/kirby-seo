@@ -1,49 +1,69 @@
 <?php
-field::$methods['seoTitle'] = function($field, $output = '') {
-	$page = $field->page;
-	if( ! empty( $field->value ) ) {
-		$seo = yaml( $field->value );
-		if( ! empty( $seo ) ) {
-			$title = ( ! empty( $seo[0]['seo-title'] ) ) ? $seo[0]['seo-title'] : $page->title();
-		} else {
-			$title = $page->title();
-		}
-	} else {
-		$title = $page->title();
+class seoTemplate {
+	// Remove http:// and https:// etc.
+	public static function uri($url) {
+		$url_parts = parse_url($url);
+		$uri = substr( $url_parts['path'], 1 );
+		return $uri;
 	}
 
-	$title = $title . c::get('seo.prefix', '' );
-	if( $output == 'html') {
-		$title = '<title>' . $title . '</title>' . "\n";
-	}
-	return $title;
-};
-
-field::$methods['seoDescription'] = function($field, $output = '') {
-	$page = $field->page;
-	$description = '';
-	if( ! empty( $field->value ) ) {
-		$seo = yaml( $field->value );
-		if( ! empty( $seo ) ) {
-			$description = ( ! empty( $seo[0]['seo-description'] ) ) ? $seo[0]['seo-description'] : '';
-		}
-	}
-	if( $output == 'html') {
-		$description = '<meta name="description" content="' . $description . '">' . "\n";
-	}
-	return $description;
-};
-
-field::$methods['hasSeoDescription'] = function($field) {
-	$page = $field->page;
-	$description = '';
-	if( ! empty( $field->value ) ) {
-		$seo = yaml( $field->value );
-		if( ! empty( $seo ) ) {
-			if( ! empty( $seo[0]['seo-description'] ) ) {
-				return true;
+	// Get field if exists
+	public static function getField($fieldname) {
+		$page = page();
+		if( ! empty( (string)$page->seo() ) ) { // Ersätt seo med custom value
+			$seo = $page->seo()->yaml(); // Ersätt seo med custom value
+			if( ! empty( $seo ) && ! empty( $seo[0] ) && ! empty( $seo[0][$fieldname] ) ) {
+				return $seo[0][$fieldname];
 			}
 		}
 	}
-	return false;
-};
+
+	// Echo or return seo title
+	public static function title( $data, $return ) {
+		$page = page();
+		$title_field = self::getField('seo-title');
+
+		if( ! empty( $title_field ) ) {
+			$title = $title_field;
+		} else {
+			$title = $page->title();
+		}
+
+		if( $return === true ) {
+			return $title;
+		} else {
+			echo '<title>' . $title . '</title>' . "\n";
+		}
+	}
+
+	// Echo or return seo description
+	public static function description( $data, $return ) {
+		$page = page();
+		$description_field = self::getField('seo-description');
+
+		$description = '';
+		if( ! empty( $description_field ) ) {
+			$description = $description_field;
+		}
+
+		if( $return === true ) {
+			return $description;
+		} else {
+			if( ! empty( $description ) ) {
+				echo '<meta name="description" content="' . $description . '">' . "\n";
+			}
+		}
+	}
+}
+
+// Main seo function
+function seo($label, $data = array(), $return = false) {
+	switch($label) {
+		case 'title' :
+			return seoTemplate::title( $data, $return );
+			break;
+		case 'description' :
+			return seoTemplate::description( $data, $return );
+			break;
+	}
+}

@@ -17,6 +17,8 @@ It stands for Search Engine Optimization. Make yourself visible in the search en
 
 ## Blueprint
 
+It's important that the key of the field is `seo` and nothing else. In the future there will be an option for it.
+
 ```yaml
 fields:
   seo:
@@ -29,28 +31,35 @@ You can add a label on it if you like, but you don't need to.
 
 **In my `header.php` I do like this:**
 
+When using this example it will output the HTML as well.
+
+```php
+<?php seo('title'); ?>
+<?php seo('description'); ?>
+```
+
+Output:
+
+```html
+<title>Some title</title>
+<meta name="description" content="Some description">
+```
+
+When using this example it will return the value.
+
+Because you return it and therefor want to control it, it does not wrap it in HTML. If you want HTML, warp it yourself or create a snippet / pattern for it.
+
 ```php
 <?php
-echo $page->seo()->seoTitle('html');
-echo $page->seo()->seoDescription('html');
+echo seo('title', array(), true);
+echo seo('description', array(), true);
 ?>
 ```
 
-**If you want full control over the HTML, don't add `html` as parameter, like this:**
+Output:
 
 ```html
-<title><?php echo $page->seo()->seoTitle(); ?></title>
-<?php if( $page->seo()->hasSeoDescription() ) : ?>
-    <meta name="description" content="<?php echo $page->seo()->seoDescription(); ?>">
-<?php endif; ?>
-```
-
-## Prefix
-
-You can append a prefix to the title as well. It's good for placing the company name last in the title.
-
-```php
-c::set('seo.prefix', ' - Some prefix');
+Some title Some description
 ```
 
 ## Additional info

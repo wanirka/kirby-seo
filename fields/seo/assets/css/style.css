@@ -2,24 +2,68 @@
 	margin-bottom: 5px;
 }
 
+.seo-count {
+	color: #000;
+	font-size: 12px;
+	line-height: 21px;
+	display: inline-block;
+	vertical-align: middle;
+	width: 40px;
+	background: #fff;
+	text-align: center;
+	flex: 0 0 auto;
+	font-family: arial,sans-serif;
+	background: #fafafa;
+	border-left: 1px solid #eee;
+	border-right: 1px solid #ddd;
+	margin-left: 20px;
+}
+
+.seo-count span {
+	padding: 0 5px;
+	display: inline-block;
+	border-radius: 5px;
+	line-height: 18px;
+}
+
+.seo-preview-title-group .seo-count {
+	padding-top: 20px;
+}
+
+.seo-preview-description-group .seo-count {
+	padding-bottom: 20px;
+}
+
 .seo-title-group {
 	display: none;
-	margin-top: 0.5em;
+
+	background: #e4e4e4;
+	padding: 10px;
+	border: 2px solid #ddd;
+	border-top: none;
 }
 
 .seo-description-group {
 	display: none;
-	margin-top: 0.5em;
+
+	background: #e4e4e4;
+	padding: 10px;
+	border: 2px solid #ddd;
+	border-top: none;
 }
 
 .seo-preview-wrap {
-	padding: 20px;
+	padding: 0 20px;
+	padding-right: 0;
 	background: #fff;
+	border-top: 1px solid #ddd;
 	border-bottom: 2px solid #ddd;
+	border-left: 1px solid #ddd;
+	display: inline-block;
 }
 
 .seo-preview {
-	width: 512px;
+	width: 572px; /*512 + 40*/
 
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
@@ -41,6 +85,19 @@
 	color: #006621;
 }
 
+.seo-preview-title-group,
+.seo-preview-description-group,
+.seo-preview-url-group {
+	display: flex;
+	align-items: stretch;
+	justify-content: space-between;
+}
+
+.seo-warning span {
+	background: #b3000a;
+	color: #fff;
+}
+
 .seo-preview-title {
 	cursor: pointer;
 	color: #1a0dab;
@@ -48,9 +105,12 @@
 	font-size: 18px;
 	font-family: arial,sans-serif;
 	line-height: 1.2;
+	line-height: 21px;
 	text-overflow: ellipsis;
 	-webkit-text-overflow: ellipsis;
 	overflow: hidden;
+	width: 100%;
+	padding-top: 20px;
 }
 
 .seo-preview-title:hover {
@@ -63,6 +123,8 @@
 	color: #545454;
 	font-family: arial,sans-serif;
 	font-size: 13px;
+	cursor: pointer;
+	padding-bottom: 20px;
 }
 
 .seo-active {
@@ -71,4 +133,20 @@
 
 .seo-render {
 	display: none;
+}
+
+.seo-close {
+	height: 20px;
+	width: 20px;
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	line-height: 20px;
+	text-align: center;
+	outline: 2px solid #aaa;
+	background: #aaa;
+	font-size: 20px;
+	color: #fff;
+	cursor: pointer;
 }
