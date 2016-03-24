@@ -4,6 +4,8 @@
 
 - Change the syntax in the template/snippet/pattern. It's very important that you change this. Else it will not work.
 - Counters added to the panel preview.
+- Close button.
+- Enchanced preview design.
 - Much rewritten.
 
 ## 0.1
