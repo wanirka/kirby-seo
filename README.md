@@ -33,7 +33,7 @@ You can add a label on it if you like, but you don't need to.
 
 When using this example it will output the HTML as well.
 
-```php
+```html
 <?php seo('title'); ?>
 <?php seo('description'); ?>
 ```
@@ -49,11 +49,9 @@ When using this example it will return the value.
 
 Because you return it and therefor want to control it, it does not wrap it in HTML. If you want HTML, warp it yourself or create a snippet / pattern for it.
 
-```php
-<?php
-echo seo('title', array(), true);
-echo seo('description', array(), true);
-?>
+```html
+<?php echo seo('title', array(), true); ?>
+<?php echo seo('description', array(), true); ?>
 ```
 
 Output:
