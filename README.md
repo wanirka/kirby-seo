@@ -2,7 +2,7 @@
 
 A serp preview field for the panel.
 
-![](https://raw.githubusercontent.com/jenstornell/kirby-seo/master/preview.gif)
+![](https://raw.githubusercontent.com/jenstornell/kirby-seo/master/preview2.gif)
 
 The black thing in the recording is not a bug. It's a click to get the slug edit modal. It just did not fit in the screen.
 
