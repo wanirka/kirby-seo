@@ -9,7 +9,6 @@
 
 		>* {
 			cursor: pointer;
-			font-family: arial,sans-serif;
 			position: relative;
 		}
 
@@ -27,6 +26,7 @@
 		.seo-view-url,
 		.seo-view-description {
 			width: 512px;
+			font-family: arial,sans-serif;
 		}
 
 		.seo-view-title {

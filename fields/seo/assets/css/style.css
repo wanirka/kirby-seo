@@ -7,7 +7,6 @@
           user-select: none; }
   .seo .seo-view > * {
     cursor: pointer;
-    font-family: arial,sans-serif;
     position: relative; }
   .seo .seo-view .seo-wrap-title {
     padding: 20px 20px 0 20px; }
@@ -18,7 +17,8 @@
   .seo .seo-view .seo-view-title,
   .seo .seo-view .seo-view-url,
   .seo .seo-view .seo-view-description {
-    width: 512px; }
+    width: 512px;
+    font-family: arial,sans-serif; }
   .seo .seo-view .seo-view-title {
     color: #1a0dab;
     white-space: nowrap;
