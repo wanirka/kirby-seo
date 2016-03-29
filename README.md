@@ -4,7 +4,7 @@
 
 A serp preview field for the panel.
 
-![](https://raw.githubusercontent.com/jenstornell/kirby-seo/master/preview2.gif)
+![](https://raw.githubusercontent.com/jenstornell/kirby-seo/master/preview3.gif)
 
 The black thing in the recording is not a bug. It's a click to get the slug edit modal. It just did not fit in the screen.
 
@@ -33,7 +33,7 @@ You can add a label on it if you like, but you don't need to.
 
 To not repeat yourself in every blueprint I highly recommend to use [Global Field Definitions](https://getkirby.com/docs/panel/blueprints/global-field-definitions).
 
-**Add this file:** `/site/blueprints/fields/seo.yml`
+**Add a file:** `/site/blueprints/fields/seo.yml`
 
 In that file, add this:
 
