@@ -10,7 +10,7 @@ class seoTemplate {
 	// Get field if exists
 	public static function getField($fieldname) {
 		$page = page();
-		if( ! empty( (string)$page->seo() ) ) { // Ersätt seo med custom value
+		if( $page->seo()->isNotEmpty() ) { // Ersätt seo med custom value
 			$seo = $page->seo()->yaml(); // Ersätt seo med custom value
 			if( ! empty( $seo ) && ! empty( $seo[0] ) && ! empty( $seo[0][$fieldname] ) ) {
 				return $seo[0][$fieldname];

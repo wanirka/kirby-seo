@@ -15,8 +15,8 @@ class seo {
 
 	// Get field if exists
 	public static function getField($fieldname, $page) {
-		if( ! empty( (string)$page->seo() ) ) { // Ersätt seo med custom value
-			$seo = $page->seo()->yaml(); // Ersätt seo med custom value
+		if( $page->seo()->isNotEmpty() ) { // Replace with custom value
+			$seo = $page->seo()->yaml(); // Replace with custom value
 			if( ! empty( $seo ) && ! empty( $seo[0] ) && ! empty( $seo[0][$fieldname] ) ) {
 				return $seo[0][$fieldname];
 			}
@@ -27,7 +27,7 @@ class seo {
 		$raw_title = self::getField('seo-title', $page);
 
 		if( ! empty( $raw_title ) ) {
-		} elseif( ! empty( $page->title() ) ) {
+		} elseif( $page->title()->isNotEmpty() ) {
 			$raw_title = $page->title();
 		} else {
 			$raw_title = 'Untitled';

@@ -1,5 +1,7 @@
 # Kirby SEO
 
+## Version 0.3
+
 A serp preview field for the panel.
 
 ![](https://raw.githubusercontent.com/jenstornell/kirby-seo/master/preview2.gif)
@@ -26,6 +28,25 @@ fields:
 ```
 
 You can add a label on it if you like, but you don't need to.
+
+### Global field definitions
+
+To not repeat yourself in every blueprint I highly recommend to use [Global Field Definitions](https://getkirby.com/docs/panel/blueprints/global-field-definitions).
+
+**Add this file:** `/site/blueprints/fields/seo.yml`
+
+In that file, add this:
+
+```yaml
+type: seo
+```
+
+Call it from the blueprint like this:
+
+```yaml
+fields:
+  seo: seo
+```
 
 ## Call in template / snippet / pattern
 
