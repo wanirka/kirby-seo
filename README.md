@@ -2,7 +2,7 @@
 
 ## Version 0.4
 
-A serp preview field for the panel.
+A serp preview field for the panel. Sorry about that the colors in the GIF is wierd
 
 ![](https://raw.githubusercontent.com/jenstornell/kirby-seo/master/preview4.gif)
 
