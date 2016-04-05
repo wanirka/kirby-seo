@@ -4,7 +4,7 @@
 
 A serp preview field for the panel.
 
-![](https://raw.githubusercontent.com/jenstornell/kirby-seo/master/preview3.gif)
+![](https://raw.githubusercontent.com/jenstornell/kirby-seo/master/preview4.gif)
 
 ## What is SEO?
 
