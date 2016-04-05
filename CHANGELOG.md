@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.4
+
+- If description text is missing, it uses content from the fields of type text as a preview.
+- Seo template controller is added. More info in the docs.
+- Seo site controller is added. More info in the docs.
+- More translations added.
+- `seo.controller.path` option added to use a custom controller path.
+- `seo.description.limit` is added if you for some reason want to change description character limit.
+- Prefix and suffix is added.
+- Template and values helper to easily copy paste template or values to the title and description.
+
 ## 0.3
 
 - The serp preview blend into the panel better.

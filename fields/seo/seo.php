@@ -1,24 +1,27 @@
 <?php
-require 'seo-class.php';
-
 class SeoField extends BaseField {
 	static public $fieldname = 'seo';
-	static public $assets = array(
-		'js' => array(
-			'script.js',
-		),
-		'css' => array(
-			'style.css',
-		)
-	);
+	static public $assets = array( 'js' => array( 'script.js' ), 'css' => array( 'style.css' ) );
 
 	public function input() {
-		// Load template with arguments
-		$html = tpl::load( __DIR__ . DS . 'template.php', $data = array(
-			'field' => $this,
-			'page' => $this->page()
-		));
-		return $html;
+		if( SeoCore::hasPlugin() ) {
+			// Set page
+			$page = $this->page();
+
+			// Load language file
+			SeoCore::loadLanguage();
+
+			// Load main snippet
+			$html = SeoCore::snippet('main', $data = array(
+				'controller' => SeoCore::panel($this->page(), $this),
+				'field' => $this,
+				'page' => $this->page()
+			));
+
+			return $html;
+		} else {
+			return l::get('plugin.required','Seo plugin is required!');
+		}
 	}
 
 	// Connecting PHP to Javascript

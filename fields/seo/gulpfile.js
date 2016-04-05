@@ -5,7 +5,6 @@ var minifyCss = require('gulp-minify-css');
 var notify = require('gulp-notify');
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
-var uglify = require('gulp-uglify');
 
 // CSS
 gulp.task('css', function() {
