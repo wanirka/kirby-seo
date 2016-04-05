@@ -33,7 +33,7 @@ site/controllers/seo/site.php
 
 You can change this path by adding this in your `config.php`:
 
-```
+```php
 c::set('seo.controller.path', kirby()->roots()->controllers() . DS . 'seo');
 ```
 
@@ -41,7 +41,7 @@ c::set('seo.controller.path', kirby()->roots()->controllers() . DS . 'seo');
 
 Here is a working example:
 
-```
+```php
 <?php
 return function($site, $pages, $page) {
   return [
