@@ -2,7 +2,7 @@
 
 ## Version 0.4
 
-A serp preview field for the panel. Sorry about that the colors in the GIF is wierd
+A serp preview field for the panel. Sorry about that the colors in the GIF is wierd:
 
 ![](https://raw.githubusercontent.com/jenstornell/kirby-seo/master/preview4.gif)
 
@@ -17,3 +17,4 @@ It stands for Search Engine Optimization. Make yourself visible in the search en
 1. [Frontend](https://github.com/jenstornell/kirby-seo/blob/master/FRONTEND.md)
 1. [Controllers](https://github.com/jenstornell/kirby-seo/blob/master/CONTROLLERS.md)
 1. [Options](https://github.com/jenstornell/kirby-seo/blob/master/OPTIONS.md)
+1. [SEO archive field](https://github.com/jenstornell/kirby-seo/blob/master/ARCHIVE.md)
