@@ -2,6 +2,8 @@
 
 To get an overview of the SEO in all the pages there is now an SEO archive field.
 
+![](https://raw.githubusercontent.com/jenstornell/kirby-seo/master/archive.gif)
+
 ## Panel page
 
 I created a page in the panel called `admin` and inside that another page called `seo`.
