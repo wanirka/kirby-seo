@@ -76,7 +76,7 @@ class SeoCore {
 
 		$array['description']['limit'] = c::get('seo.description.limit', 155);
 		$array['url']['edit'] = self::editSlugUrl($page);
-		$array['url']['preview'] = self::uri( $page->url() );
+		$array['url']['preview'] = self::urlPreview( $page->url() );
 
 		return $array;
 	}
@@ -178,6 +178,8 @@ class SeoCore {
 					$haystack = str_replace( '{{' . $needle . '}}', $value, $haystack );
 				}
 				$array[$type][$key . $suffix] = $haystack;
+			} else {
+				$array[$type][$key . $suffix] = $array[$type][$key];
 			}
 		}
 		return $array;
@@ -282,6 +284,14 @@ class SeoCore {
 		return $uri;
 	}
 
+	// Url preview
+	public static function urlPreview( $url ) {
+		$url_parts = parse_url($url);
+		$scheme = ( $url_parts['scheme'] == 'https' ) ? 'https://' : '';
+		$uri = $scheme . $url_parts['host'] . $url_parts['path'];
+		return $uri;
+	}
+
 	// Edit slug url
 	public static function editSlugUrl($page) {
 		$url = u() . '/panel/pages/' . $page->id() . '/url';
@@ -293,19 +303,24 @@ class SeoCore {
 		$textareas = '';
 		if( $field ) {
 			$fields = $field->page()->blueprint()->fields($field)->toArray();
+			$textareas = self::textsByFields($page, $fields);
+		}
+		return $textareas;
+	}
 
-			if( ! empty( $fields ) ) {
-				foreach( $fields as $item ) {
-					$name = $item['name'];
-					$type = $item['type'];
+	public static function textsByFields($page, $fields) {
+		$textareas = '';
+		if( ! empty( $fields ) ) {
+			foreach( $fields as $item ) {
+				$name = $item['name'];
+				$type = $item['type'];
 
-					if( $type == 'textarea') {
-						$textareas .= strip_tags( $page->$name()->kirbytext() ) . ' ';
-					}
+				if( $type == 'textarea') {
+					$textareas .= strip_tags( $page->$name()->kirbytext() ) . ' ';
 				}
-				$textareas = preg_replace('/\s+/', ' ', $textareas);
-				$textareas = htmlspecialchars($textareas, ENT_QUOTES, 'UTF-8');
 			}
+			$textareas = preg_replace('/\s+/', ' ', $textareas);
+			$textareas = htmlspecialchars($textareas, ENT_QUOTES, 'UTF-8');
 		}
 		return $textareas;
 	}

@@ -4,7 +4,7 @@ class SeoField extends BaseField {
 	static public $assets = array( 'js' => array( 'script.js' ), 'css' => array( 'style.css' ) );
 
 	public function input() {
-		if( SeoCore::hasPlugin() ) {
+		if( class_exists('SeoCore') ) {
 			// Set page
 			$page = $this->page();
 
