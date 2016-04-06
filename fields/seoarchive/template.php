@@ -1,5 +1,5 @@
 <a class="seo-link" href="<?php echo u() . '/panel/pages/' . $page->uri() . '/edit'; ?>">
-	<div class="seo">
+	<div class="seo"<?php echo $controller['description']['fake']; ?>>
 		<div class="seo-preview">
 			<div class="seo-wrap seo-wrap-title">
 				<div class="seo-view seo-view-title"><?php echo $controller['title']['full-replaced']; ?></div>
