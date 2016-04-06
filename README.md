@@ -12,9 +12,9 @@ It stands for Search Engine Optimization. Make yourself visible in the search en
 
 ## Chapters
 
-1. [Installation](https://github.com/jenstornell/kirby-seo/blob/master/INSTALL.md)
-1. [Blueprint](https://github.com/jenstornell/kirby-seo/blob/master/BLUEPRINT.md)
-1. [Frontend](https://github.com/jenstornell/kirby-seo/blob/master/FRONTEND.md)
+1. [Installation](https://github.com/jenstornell/kirby-seo/blob/master/docs/INSTALL.md)
+1. [Blueprint](https://github.com/jenstornell/kirby-seo/blob/master/docs/BLUEPRINT.md)
+1. [Frontend](https://github.com/jenstornell/kirby-seo/blob/master/docs/FRONTEND.md)
 1. [Controllers](https://github.com/jenstornell/kirby-seo/blob/master/CONTROLLERS.md)
-1. [Options](https://github.com/jenstornell/kirby-seo/blob/master/OPTIONS.md)
-1. [SEO archive field](https://github.com/jenstornell/kirby-seo/blob/master/ARCHIVE.md)
+1. [Options](https://github.com/jenstornell/kirby-seo/blob/master/docs/OPTIONS.md)
+1. [SEO archive field](https://github.com/jenstornell/kirby-seo/blob/master/docs/ARCHIVE.md)
