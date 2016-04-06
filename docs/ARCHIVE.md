@@ -11,17 +11,29 @@ I created a page in the panel called `admin` and inside that another page called
 In your blueprint, add something like this:
 
 ```yml
-title: Page
-pages: false
+title: Seo Archive
+pages:
+  hide: true
+  limit: 25
+  exclude:
+    - error
+    - some/child/page
 files: false
+options:
+  preview: false
 fields:
   seoarchive:
     type: seoarchive
 ```
 
+## Pagination
+
+Set a page limit like the example above to have a paginated seo archive.
+
+## Exclude pages
+
+You can exclude pages from the result by adding their uri into a list in your blueprint, like the example above.
+
 ## Future
 
-- Exclude pages
-- Pagination
 - List children or list all pages
-- Better description handling

@@ -6,6 +6,8 @@ A serp preview field for the panel. Sorry about that the colors in the GIF is wi
 
 ![](https://raw.githubusercontent.com/jenstornell/kirby-seo/master/preview4.gif)
 
+![](https://raw.githubusercontent.com/jenstornell/kirby-seo/master/archive.gif)
+
 ## What is SEO?
 
 It stands for Search Engine Optimization. Make yourself visible in the search engines.

@@ -21,9 +21,13 @@ class SeoarchiveField extends BaseField {
 			$limit = $this->page()->blueprint()->pages()->limit();
 			$title = $this->page()->blueprint()->title();
 
+			$yaml = $this->page()->blueprint()->yaml();
+			$exclude = ( ! empty( $yaml['pages'] ) && ! empty( $yaml['pages']['exclude'] ) ) ? $yaml['pages']['exclude'] : null;
+
 			$offset = $limit * ( $paging - 1 );
-			$query = site()->children()->slice($offset, $limit);
-			$total = site()->children()->count();
+			$query = site()->index()->not($exclude)->slice($offset, $limit);
+			$total = site()->index()->not($exclude)->count();
+			
 			$showing = $paging * $limit;
 
 			$prev = ( $offset > 1 ) ? true : false;
