@@ -1,7 +1,6 @@
 ## Installation
 
 1. Place the `fields/seo` folder in `site/fields`. The field for the panel.
-1. Place the `plugins/seo` folder in `site/plugins`. The helper functions for your site.
 1. [Add the field](https://github.com/jenstornell/kirby-seo/blob/master/docs/BLUEPRINT.md) to your blueprint
 1. [Add functions](https://github.com/jenstornell/kirby-seo/blob/master/docs/FRONTEND.md) to your template / snippet / pattern
 

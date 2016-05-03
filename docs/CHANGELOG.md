@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5
+
+- Register fields which means the only thing that needs to be installed is the plugin.
+
 ## 0.4
 
 - If description text is missing, it uses content from the fields of type text as a preview.

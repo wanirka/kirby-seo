@@ -1,6 +1,8 @@
 # Kirby SEO
 
-## Version 0.4
+*Require 2.3 beta 2*
+
+## Version 0.5
 
 A serp preview field for the panel. Sorry about that the colors in the GIF is wierd:
 
