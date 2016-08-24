@@ -1,10 +1,10 @@
 # Kirby SEO
 
-*Require 2.3 beta 2*
+*Requires Kirby 2.3*
 
 ## Version 0.5
 
-A serp preview field for the panel. Sorry about that the colors in the GIF is wierd:
+A search engine results page (SERP) preview field for the panel. Sorry that the colors in the GIF are weird:
 
 ![](https://raw.githubusercontent.com/jenstornell/kirby-seo/master/preview4.gif)
 
