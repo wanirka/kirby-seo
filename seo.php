@@ -13,7 +13,7 @@ function seo($type, $data = array(), $return = false) {
 	if( $return !== false ) {
 		echo $content;
 	} else {
-		$html = '';
+		$html = array();
 		$html['title'] = '<title>' . $content . '</title>' . "\n";
 		$html['description'] = ( ! empty( $content ) ) ?  '<meta name="description" content="' . $content . '">' . "\n" : '';
 		return $html[$type];
