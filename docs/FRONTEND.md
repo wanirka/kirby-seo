@@ -7,8 +7,8 @@ You need to call a function in your template / snippet / pattern to make it work
 When using this example it will output the HTML as well.
 
 ```html
-<?php seo('title'); ?>
-<?php seo('description'); ?>
+<?php echo seo('title'); ?>
+<?php echo seo('description'); ?>
 ```
 
 Output:
